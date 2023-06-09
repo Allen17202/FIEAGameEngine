@@ -1,0 +1,23 @@
+{
+  "MyName": {
+    "type": "string",
+    "value": "Gregory"
+  },
+  "RandomInts": {
+    "type": "integer",
+    "value": [ 43, 7583, 74397 ]
+  },
+  "FamilyGuy": {
+    "type": "table",
+    "value": {
+      "Character": {
+        "type": "string",
+        "value": "Lois"
+      },
+      "CharacterTwo": {
+        "type": "integer",
+        "value": 985
+      }
+    }
+  }
+}
