@@ -25,7 +25,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)ActionIncrement.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ActionList.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ActionListWhile.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Allocator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Attributed.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BlockAllocator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Datum.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)DefaultEquality.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Event.h" />
@@ -34,6 +36,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)EventQueue.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)EventSubscriber.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Factory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)FreeListAllocator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)GameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)GameState.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)GameTime.h" />
@@ -87,10 +90,13 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)TypeRegistry.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Allocator.inl" />
+    <None Include="$(MSBuildThisFileDirectory)BlockAllocator.inl" />
     <None Include="$(MSBuildThisFileDirectory)Datum.inl" />
     <None Include="$(MSBuildThisFileDirectory)DefaultEquality.inl" />
     <None Include="$(MSBuildThisFileDirectory)Event.inl" />
     <None Include="$(MSBuildThisFileDirectory)Factory.inl" />
+    <None Include="$(MSBuildThisFileDirectory)FreeListAllocator.inl" />
     <None Include="$(MSBuildThisFileDirectory)HashFunction.inl" />
     <None Include="$(MSBuildThisFileDirectory)HashMap.inl" />
     <None Include="$(MSBuildThisFileDirectory)RTTI.inl" />

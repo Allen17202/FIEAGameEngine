@@ -153,12 +153,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ActionTests.cpp" />
+    <ClCompile Include="AllocatorTests.cpp" />
     <ClCompile Include="AttributedFoo.cpp" />
     <ClCompile Include="AttributedTests.cpp" />
+    <ClCompile Include="BlockAllocatorTests.cpp" />
     <ClCompile Include="DatumTests.cpp" />
     <ClCompile Include="DefaultEqualityTests.cpp" />
     <ClCompile Include="EventTests.cpp" />
     <ClCompile Include="FactoryTests.cpp" />
+    <ClCompile Include="FreeListAllocatorTests.cpp" />
     <ClCompile Include="GameObjectTests.cpp" />
     <ClCompile Include="HashFunctionTests.cpp" />
     <ClCompile Include="Foo.cpp" />

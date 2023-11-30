@@ -132,6 +132,15 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)EventMessageAttributed.h">
       <Filter>Reaction</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Allocator.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)BlockAllocator.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)FreeListAllocator.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
@@ -243,6 +252,15 @@
     </None>
     <None Include="$(MSBuildThisFileDirectory)Event.inl">
       <Filter>Event</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Allocator.inl">
+      <Filter>Misc</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)BlockAllocator.inl">
+      <Filter>Misc</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)FreeListAllocator.inl">
+      <Filter>Misc</Filter>
     </None>
   </ItemGroup>
 </Project>
