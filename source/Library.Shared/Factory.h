@@ -1,5 +1,9 @@
 #pragma once
+#ifdef _WIN32
 #include <gsl/gsl>
+#elif defined(__linux__)
+#include <gsl/gsl>
+#endif
 #include "HashMap.h"
 #include <memory>
 #include <string>
@@ -77,7 +81,7 @@ namespace FIEAGameEngine
 			{																													\
 				return new ConcreteProductType();																				\
 			}																													\
-			virtual ~##ConcreteProductType##Factory()																			\
+			virtual ~ConcreteProductType##Factory()																			\
 			{																													\
 			}																													\
 			const std::string& ClassName() const override																		\

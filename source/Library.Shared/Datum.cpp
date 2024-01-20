@@ -46,7 +46,8 @@ namespace FIEAGameEngine
 			}
 			else
 			{
-				memcpy_s(_data.vp, _capacity * _typeSizes[static_cast<int>(_type)], other._data.vp, other._capacity * _typeSizes[static_cast<int>(other._type)]);
+				/*memcpy_s(_data.vp, _capacity * _typeSizes[static_cast<int>(_type)], other._data.vp, other._capacity * _typeSizes[static_cast<int>(other._type)]);*/
+				memcpy(_data.vp, other._data.vp, other._capacity * _typeSizes[static_cast<int>(other._type)]);
 				_size = other._size;
 			}
 		}
@@ -89,10 +90,14 @@ namespace FIEAGameEngine
 				}
 				else
 				{
-					memcpy_s(_data.vp,
-						_size * _typeSizes[static_cast<int>(_type)],
+
+					memcpy(_data.vp,
 						other._data.vp,
 						other._size * _typeSizes[static_cast<int>(other._type)]);
+					/*memcpy_s(_data.vp,
+						_size * _typeSizes[static_cast<int>(_type)],
+						other._data.vp,
+						other._size * _typeSizes[static_cast<int>(other._type)]);*/
 				}
 			}
 		}
@@ -703,21 +708,21 @@ namespace FIEAGameEngine
 	 int Datum::StringToInt(const std::string& value) const
 	{
 		int valueConversion;
-		sscanf_s(value.c_str(), "%d", &valueConversion);
+		sscanf(value.c_str(), "%d", &valueConversion);
 		return valueConversion;
 	}
 
 	 float Datum::StringToFloat(const std::string& value) const
 	{
 		float valueConversion;
-		sscanf_s(value.c_str(), "%f", &valueConversion);
+		sscanf(value.c_str(), "%f", &valueConversion);
 		return valueConversion;
 	}
 
 	 glm::vec4 Datum::StringToVector(const std::string& value) const
 	{
 		float a, b, c, d;
-		sscanf_s(value.c_str(), "vec4(%f, %f, %f, %f)", &a, &b, &c, &d);
+		sscanf(value.c_str(), "vec4(%f, %f, %f, %f)", &a, &b, &c, &d);
 		glm::vec4 valueConversion(a, b, c, d);
 		return valueConversion;
 	}
@@ -725,7 +730,7 @@ namespace FIEAGameEngine
 	 glm::mat4 Datum::StringToMatrix(const std::string& value) const
 	{
 		float a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;
-		sscanf_s(value.c_str(), "mat4((%f, %f, %f, %f), (%f, %f, %f, %f), (%f, %f, %f, %f), (%f, %f, %f, %f))", &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &o, &p);
+		sscanf(value.c_str(), "mat4((%f, %f, %f, %f), (%f, %f, %f, %f), (%f, %f, %f, %f), (%f, %f, %f, %f))", &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &o, &p);
 		glm::mat4 valueConversion(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p);
 		return valueConversion;
 	}
@@ -733,48 +738,62 @@ namespace FIEAGameEngine
 	 std::string Datum::ToString(std::size_t valueIndex) const
 	{
 
-		switch (_type)
-		{
-		case Datum::DatumTypes::Unknown:
-			throw std::runtime_error("Can not set from an Unknown Datum");
-			break;
-		case Datum::DatumTypes::Integer:
-			return std::to_string(GetInt(valueIndex));
-			break;
-		case Datum::DatumTypes::Float:
-			return std::to_string(GetFloat(valueIndex));
-			break;
-		case Datum::DatumTypes::String:
-			return GetString(valueIndex);
-			break;
-		case Datum::DatumTypes::Vector:
-			glm::vec4 temp = GetVector(valueIndex);
-			return "vec4("s + std::to_string(temp.x) + ", "s + std::to_string(temp.y) + ", "s + std::to_string(temp.z) + ", "s + std::to_string(temp.w) + ")"s;
-			break;
-		case Datum::DatumTypes::Matrix:
-			glm::mat4 tempMat = GetMatrix(valueIndex);
-			return "mat4(("s +
-				std::to_string(tempMat[0][0]) + ", "s + std::to_string(tempMat[0][1]) + ", "s + std::to_string(tempMat[0][2]) + ", "s + std::to_string(tempMat[0][3]) + "), ("s +
-				std::to_string(tempMat[1][0]) + ", "s + std::to_string(tempMat[1][1]) + ", "s + std::to_string(tempMat[1][2]) + ", "s + std::to_string(tempMat[1][3]) + "), ("s +
-				std::to_string(tempMat[2][0]) + ", "s + std::to_string(tempMat[2][1]) + ", "s + std::to_string(tempMat[2][2]) + ", "s + std::to_string(tempMat[2][3]) + "), ("s +
-				std::to_string(tempMat[3][0]) + ", "s + std::to_string(tempMat[3][1]) + ", "s + std::to_string(tempMat[3][2]) + ", "s + std::to_string(tempMat[3][3]) + "))"s;
-			break;
-		case Datum::DatumTypes::Pointer:
-		{
-			const RTTI* tempPointer = GetPointer(valueIndex);
-			if (tempPointer == nullptr)
-			{
-				return "nullptr"s;
-			}
-			else
-			{
-				return tempPointer->ToString();
-			}
-		}
-		break;
-		default:
-			return "Error has occured";
-			break;
+		 switch (_type)
+		 {
+		 case Datum::DatumTypes::Unknown:
+		 {
+			 throw std::runtime_error("Can not set from an Unknown Datum");
+			 break;
+		 }
+		 case Datum::DatumTypes::Integer:
+		 {
+			 return std::to_string(GetInt(valueIndex));
+			 break;
+		 }
+		 case Datum::DatumTypes::Float:
+		 {
+			 return std::to_string(GetFloat(valueIndex));
+			 break;
+		 }
+		 case Datum::DatumTypes::String:
+		 {
+			 return GetString(valueIndex);
+			 break;
+		 }
+		 case Datum::DatumTypes::Vector:
+		 {
+			 glm::vec4 temp = GetVector(valueIndex);
+			 return "vec4("s + std::to_string(temp.x) + ", "s + std::to_string(temp.y) + ", "s + std::to_string(temp.z) + ", "s + std::to_string(temp.w) + ")"s;
+			 break;
+		 }
+		 case Datum::DatumTypes::Matrix:
+		 {
+			 glm::mat4 tempMat = GetMatrix(valueIndex);
+			 return "mat4(("s +
+				 std::to_string(tempMat[0][0]) + ", "s + std::to_string(tempMat[0][1]) + ", "s + std::to_string(tempMat[0][2]) + ", "s + std::to_string(tempMat[0][3]) + "), ("s +
+				 std::to_string(tempMat[1][0]) + ", "s + std::to_string(tempMat[1][1]) + ", "s + std::to_string(tempMat[1][2]) + ", "s + std::to_string(tempMat[1][3]) + "), ("s +
+				 std::to_string(tempMat[2][0]) + ", "s + std::to_string(tempMat[2][1]) + ", "s + std::to_string(tempMat[2][2]) + ", "s + std::to_string(tempMat[2][3]) + "), ("s +
+				 std::to_string(tempMat[3][0]) + ", "s + std::to_string(tempMat[3][1]) + ", "s + std::to_string(tempMat[3][2]) + ", "s + std::to_string(tempMat[3][3]) + "))"s;
+			 break;
+		 }
+		 case Datum::DatumTypes::Pointer:
+		 {
+			 const RTTI* tempPointer = GetPointer(valueIndex);
+			 if (tempPointer == nullptr)
+			 {
+				 return "nullptr"s;
+			 }
+			 else
+			 {
+				 return tempPointer->ToString();
+			 }
+			 break;
+		 }
+		 default:
+		 {
+			 return "Error has occured";
+			 break;
+		 }
 		}
 	}
 
@@ -1324,11 +1343,18 @@ namespace FIEAGameEngine
 				_data.s[valueIndex].~basic_string();
 			}
 
-			memmove_s(_data.by + valueIndex * _typeSizes[static_cast<int>(_type)],
+			memmove(_data.by + valueIndex * _typeSizes[static_cast<int>(_type)],
+				_data.by + (valueIndex + 1) * _typeSizes[static_cast<int>(_type)],
+				(_size - valueIndex - 1) + (valueIndex - 1) * _typeSizes[static_cast<int>(_type)]);
+			--_size;
+
+			/*memmove_s(_data.by + valueIndex * _typeSizes[static_cast<int>(_type)],
 				(_size - valueIndex) * _typeSizes[static_cast<int>(_type)],
 				_data.by + (valueIndex + 1) * _typeSizes[static_cast<int>(_type)],
 				(_size - valueIndex - 1) * _typeSizes[static_cast<int>(_type)]);
-			--_size;
+			--_size;*/
+
+
 		}
 	}
 
@@ -1424,7 +1450,7 @@ namespace FIEAGameEngine
 			throw runtime_error("The Datum type is not a correct");
 		}
 		bool valueRemoved = false;
-		std::pair valueFound = FindPointer(value);
+		std::pair<size_t, bool> valueFound = FindPointer(value);
 
 		if (valueFound.second)
 		{

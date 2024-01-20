@@ -29,8 +29,8 @@ namespace FIEAGameEngine
 			{
 				anotherDatum = datum;
 			}
-			std::pair pairEntry = std::make_pair((*it).first, anotherDatum);
-			std::pair insertionResult = _map.Insert(pairEntry);
+			auto pairEntry = std::make_pair((*it).first, anotherDatum);
+			auto insertionResult = _map.Insert(pairEntry);
 			_orderVector.PushBack(&(*insertionResult.first));
 		}
 	}
@@ -59,8 +59,8 @@ namespace FIEAGameEngine
 				{
 					anotherDatum = datum;
 				}
-				std::pair pairEntry = std::make_pair((*it).first, anotherDatum);
-				std::pair insertionResult = _map.Insert(pairEntry);
+				auto pairEntry = std::make_pair((*it).first, anotherDatum);
+				auto insertionResult = _map.Insert(pairEntry);
 				_orderVector.PushBack(&(*insertionResult.first));
 			}
 		}
@@ -166,10 +166,18 @@ namespace FIEAGameEngine
 	{
 		return (*_orderVector[valueIndex]).second;
 	}
+
+#ifdef _WIN32
 	gsl::owner<Scope*> Scope::Clone() const
 	{
 		return new Scope(*this);
 	}
+#elif defined(__linux__)
+	gsl::owner<std::unique_ptr<Scope>> Scope::Clone() const
+	{
+		return gsl::owner<std::unique_ptr<Scope>>(new Scope(*this));
+	}
+#endif
 	Datum* Scope::Find(const std::string& valueName)
 	{
 		if (_map.ContainsKey(valueName))
@@ -393,7 +401,7 @@ namespace FIEAGameEngine
 	}
 	Datum& Scope::Append(const std::string& valueName, bool& wasAppended)
 	{
-		std::pair inserted = _map.Insert(std::make_pair(valueName, Datum()));
+		auto inserted = _map.Insert(std::make_pair(valueName, Datum()));
 		auto& key = inserted.first;
 		wasAppended = inserted.second;
 

@@ -1,5 +1,6 @@
 #include "HashFunction.h"
-
+#include <cstring>
+using namespace std;
 namespace FIEAGameEngine
 {
 	template<typename T>

@@ -39,32 +39,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)HashMap.h">
       <Filter>Containers</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)DefaultEquality.h">
-      <Filter>Misc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)HashFunction.h">
-      <Filter>Misc</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Datum.h">
-      <Filter>Containers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Scope.h">
       <Filter>Containers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Stack.h">
       <Filter>Containers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)JsonTableParseHelper.h">
-      <Filter>JsonParseing</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)JsonParseHelperInteger.h">
-      <Filter>JsonParseing</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)IJsonParseHelper.h">
-      <Filter>JsonParseing</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)JsonParseCoordinator.h">
-      <Filter>JsonParseing</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)GameTime.h">
       <Filter>Support Code</Filter>
@@ -72,151 +51,19 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)RTTI.h">
       <Filter>Support Code</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Attributed.h">
-      <Filter>YASL</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Factory.h">
-      <Filter>YASL</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Signature.h">
-      <Filter>YASL</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)TypeRegistry.h">
-      <Filter>YASL</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Action.h">
-      <Filter>Action</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)ActionList.h">
-      <Filter>Action</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)ActionIncrement.h">
-      <Filter>Action</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)ActionCreateAction.h">
-      <Filter>Action</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)ActionDestroyAction.h">
-      <Filter>Action</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)GameObject.h">
-      <Filter>Action</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)ActionListWhile.h">
-      <Filter>Action</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EventSubscriber.h">
-      <Filter>Event</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EventPublisher.h">
-      <Filter>Event</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Event.h">
-      <Filter>Event</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EventQueue.h">
-      <Filter>Event</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Reaction.h">
-      <Filter>Reaction</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)ActionEvent.h">
-      <Filter>Reaction</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)GameState.h">
-      <Filter>Reaction</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)ReactionAttributed.h">
-      <Filter>Reaction</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)EventMessageAttributed.h">
-      <Filter>Reaction</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Allocator.h">
-      <Filter>Misc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)BlockAllocator.h">
-      <Filter>Misc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)FreeListAllocator.h">
-      <Filter>Misc</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
       <Filter>Containers</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)HashFunction.cpp">
-      <Filter>Misc</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Datum.cpp">
       <Filter>Containers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Scope.cpp">
-      <Filter>Containers</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)IJsonParseHelper.cpp">
-      <Filter>JsonParseing</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)JsonParseCoordinator.cpp">
-      <Filter>JsonParseing</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)JsonParseHelperInteger.cpp">
-      <Filter>JsonParseing</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)JsonTableParseHelper.cpp">
-      <Filter>JsonParseing</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)GameTime.cpp">
       <Filter>Support Code</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)RTTI.cpp">
       <Filter>Support Code</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Attributed.cpp">
-      <Filter>YASL</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)TypeRegistry.cpp">
-      <Filter>YASL</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Action.cpp">
-      <Filter>Action</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)ActionList.cpp">
-      <Filter>Action</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)ActionIncrement.cpp">
-      <Filter>Action</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)ActionCreateAction.cpp">
-      <Filter>Action</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)ActionDestroyAction.cpp">
-      <Filter>Action</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)GameObject.cpp">
-      <Filter>Action</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)ActionListWhile.cpp">
-      <Filter>Action</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)EventPublisher.cpp">
-      <Filter>Event</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)EventQueue.cpp">
-      <Filter>Event</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Reaction.cpp">
-      <Filter>Reaction</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)EventMessageAttributed.cpp">
-      <Filter>Reaction</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)GameState.cpp">
-      <Filter>Reaction</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)ReactionAttributed.cpp">
-      <Filter>Reaction</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -229,12 +76,6 @@
     <None Include="$(MSBuildThisFileDirectory)HashMap.inl">
       <Filter>Containers</Filter>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)DefaultEquality.inl">
-      <Filter>Misc</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)HashFunction.inl">
-      <Filter>Misc</Filter>
-    </None>
     <None Include="$(MSBuildThisFileDirectory)Datum.inl">
       <Filter>Containers</Filter>
     </None>
@@ -243,24 +84,6 @@
     </None>
     <None Include="$(MSBuildThisFileDirectory)RTTI.inl">
       <Filter>Support Code</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)Factory.inl">
-      <Filter>YASL</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)TypeRegistry.inl">
-      <Filter>YASL</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)Event.inl">
-      <Filter>Event</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)Allocator.inl">
-      <Filter>Misc</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)BlockAllocator.inl">
-      <Filter>Misc</Filter>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)FreeListAllocator.inl">
-      <Filter>Misc</Filter>
     </None>
   </ItemGroup>
 </Project>

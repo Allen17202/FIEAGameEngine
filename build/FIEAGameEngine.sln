@@ -8,36 +8,62 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Shared.props = Shared.props
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library.Desktop", "..\source\Library.Desktop\Library.Desktop.vcxproj", "{EA07546B-6E6E-4801-B447-D88976199311}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library.Shared", "..\source\Library.Shared\Library.Shared.vcxitems", "{6370F860-ED3C-4242-9D25-CFF57529F597}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library.Desktop.Tests", "..\source\Library.Desktop.Tests\Library.Desktop.Tests.vcxproj", "{FBCAE432-FA9E-411F-965E-ECC0CB7950AF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Linux.Desktop", "..\source\Linux.Desktop\Linux.Desktop.vcxproj", "{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		LinuxDebug|ARM = LinuxDebug|ARM
+		LinuxDebug|ARM64 = LinuxDebug|ARM64
+		LinuxDebug|x64 = LinuxDebug|x64
+		LinuxDebug|x86 = LinuxDebug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EA07546B-6E6E-4801-B447-D88976199311}.Debug|x64.ActiveCfg = Debug|x64
-		{EA07546B-6E6E-4801-B447-D88976199311}.Debug|x64.Build.0 = Debug|x64
-		{EA07546B-6E6E-4801-B447-D88976199311}.Debug|x86.ActiveCfg = Debug|Win32
-		{EA07546B-6E6E-4801-B447-D88976199311}.Debug|x86.Build.0 = Debug|Win32
-		{EA07546B-6E6E-4801-B447-D88976199311}.Release|x64.ActiveCfg = Release|x64
-		{EA07546B-6E6E-4801-B447-D88976199311}.Release|x64.Build.0 = Release|x64
-		{EA07546B-6E6E-4801-B447-D88976199311}.Release|x86.ActiveCfg = Release|Win32
-		{EA07546B-6E6E-4801-B447-D88976199311}.Release|x86.Build.0 = Release|Win32
-		{FBCAE432-FA9E-411F-965E-ECC0CB7950AF}.Debug|x64.ActiveCfg = Debug|x64
-		{FBCAE432-FA9E-411F-965E-ECC0CB7950AF}.Debug|x64.Build.0 = Debug|x64
-		{FBCAE432-FA9E-411F-965E-ECC0CB7950AF}.Debug|x86.ActiveCfg = Debug|Win32
-		{FBCAE432-FA9E-411F-965E-ECC0CB7950AF}.Debug|x86.Build.0 = Debug|Win32
-		{FBCAE432-FA9E-411F-965E-ECC0CB7950AF}.Release|x64.ActiveCfg = Release|x64
-		{FBCAE432-FA9E-411F-965E-ECC0CB7950AF}.Release|x64.Build.0 = Release|x64
-		{FBCAE432-FA9E-411F-965E-ECC0CB7950AF}.Release|x86.ActiveCfg = Release|Win32
-		{FBCAE432-FA9E-411F-965E-ECC0CB7950AF}.Release|x86.Build.0 = Release|Win32
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|ARM.ActiveCfg = Debug|ARM
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|ARM.Build.0 = Debug|ARM
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|ARM.Deploy.0 = Debug|ARM
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|ARM64.Build.0 = Debug|ARM64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|x64.ActiveCfg = Debug|x64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|x64.Build.0 = Debug|x64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|x64.Deploy.0 = Debug|x64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|x86.ActiveCfg = Debug|x86
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|x86.Build.0 = Debug|x86
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Debug|x86.Deploy.0 = Debug|x86
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|ARM.ActiveCfg = LinuxDebug|ARM
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|ARM.Build.0 = LinuxDebug|ARM
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|ARM.Deploy.0 = LinuxDebug|ARM
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|ARM64.ActiveCfg = LinuxDebug|ARM64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|ARM64.Build.0 = LinuxDebug|ARM64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|ARM64.Deploy.0 = LinuxDebug|ARM64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|x64.ActiveCfg = LinuxDebug|x64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|x64.Build.0 = LinuxDebug|x64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|x64.Deploy.0 = LinuxDebug|x64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|x86.ActiveCfg = LinuxDebug|x86
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|x86.Build.0 = LinuxDebug|x86
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.LinuxDebug|x86.Deploy.0 = LinuxDebug|x86
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|ARM.ActiveCfg = Release|ARM
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|ARM.Build.0 = Release|ARM
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|ARM.Deploy.0 = Release|ARM
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|ARM64.ActiveCfg = Release|ARM64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|ARM64.Build.0 = Release|ARM64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|ARM64.Deploy.0 = Release|ARM64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|x64.ActiveCfg = Release|x64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|x64.Build.0 = Release|x64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|x64.Deploy.0 = Release|x64
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|x86.ActiveCfg = Release|x86
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|x86.Build.0 = Release|x86
+		{5F3F9DC7-42D5-4B1A-89C8-7972396F2A71}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,7 +72,7 @@ Global
 		SolutionGuid = {829862C7-52EA-41C3-993D-A4146BD2781C}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\source\Library.Shared\Library.Shared.vcxitems*{5f3f9dc7-42d5-4b1a-89c8-7972396f2a71}*SharedItemsImports = 4
 		..\source\Library.Shared\Library.Shared.vcxitems*{6370f860-ed3c-4242-9d25-cff57529f597}*SharedItemsImports = 9
-		..\source\Library.Shared\Library.Shared.vcxitems*{ea07546b-6e6e-4801-b447-d88976199311}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal

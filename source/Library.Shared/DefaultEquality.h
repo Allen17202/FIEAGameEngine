@@ -1,5 +1,5 @@
 #pragma once
-
+#include <cstring>
 namespace FIEAGameEngine
 {
 	template <typename T>

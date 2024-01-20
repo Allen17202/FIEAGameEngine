@@ -3,7 +3,13 @@
 #include "Datum.h"
 #include "Vector.h"
 #include "RTTI.h"
+
+#ifdef _WIN32
 #include <gsl/gsl>
+#else defined(__linux__)
+#include <gsl/gsl>
+#endif
+
 #include "Factory.h"
 namespace FIEAGameEngine
 {
@@ -97,8 +103,27 @@ namespace FIEAGameEngine
 		/// </summary>
 		/// <param name="valueIndex"></param>
 		/// <returns></returns>
-		[[nodiscard]] virtual gsl::owner<Scope*> Clone() const;
+		//[[nodiscard]] virtual gsl::owner<Scope*> Clone() const;
 		
+#ifdef _WIN32
+		/// <summary>
+		/// Ownership is being transferred
+		/// </summary>
+		/// <param name="valueIndex"></param>
+		/// <returns></returns>
+		[[nodiscard]] virtual gsl::owner<Scope*> Clone() const;
+#elif defined(__linux__)
+
+		/// <summary>
+		/// Ownership is being transferred
+		/// </summary>
+		/// <param name="valueIndex"></param>
+		/// <returns></returns>
+		[[nodiscard]] virtual gsl::owner<std::unique_ptr<Scope>> Scope::Clone() const;
+#endif
+		
+
+
 		/// <summary>
 		/// return address of Datum associated with name in Scope, nullptr otherwwise
 		/// </summary>

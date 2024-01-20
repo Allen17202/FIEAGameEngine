@@ -295,7 +295,7 @@ namespace FIEAGameEngine
 	template<typename TKey, typename TData>
 	inline typename HashMap<TKey, TData>::Iterator HashMap<TKey, TData>::end()
 	{
-		return Iterator(*this, Capacity(), chain_type::Iterator());
+		return Iterator(*this, Capacity(), typename chain_type::Iterator());
 	}
 
 	template<typename TKey, typename TData>
@@ -331,7 +331,7 @@ namespace FIEAGameEngine
 	template<typename TKey, typename TData>
 	inline typename HashMap<TKey, TData>::ConstIterator HashMap<TKey, TData>::end() const
 	{
-		return ConstIterator(*this, Capacity(), chain_type::ConstIterator());
+		return typename HashMap<TKey, TData>::ConstIterator(*this, Capacity(), typename HashMap<TKey, TData>::chain_type::ConstIterator());
 	}
 	template<typename TKey, typename TData>
 	inline  typename HashMap<TKey, TData>::Iterator HashMap<TKey, TData>::Find(const TKey& keyToBeFound, EqualityFunctor equals)

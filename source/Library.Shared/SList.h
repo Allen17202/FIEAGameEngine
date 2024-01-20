@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <functional>
 #include <initializer_list>
+#include "DefaultEquality.h"
 
 namespace FIEAGameEngine
 {

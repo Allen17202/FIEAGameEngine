@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "RTTI.h"
+#include <string>
 
 namespace FIEAGameEngine
 {
